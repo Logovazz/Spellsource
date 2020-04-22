@@ -29,11 +29,6 @@ public class ActionLogic implements Serializable {
 	private final TargetLogic targetLogic = new TargetLogic();
 
 	@Suspendable
-	GameAction getAutoHeroPower(GameContext context, Player player) {
-		return getHeroPowerActions(context, player).get(0);
-	}
-
-	@Suspendable
 	private List<GameAction> getHeroAttackActions(GameContext context, Player player) {
 		List<GameAction> heroAttackActions = new ArrayList<GameAction>();
 		Hero hero = player.getHero();
